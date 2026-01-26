@@ -1,5 +1,7 @@
 import React from 'react';
 
+import FirstComponent from './components/FirstComponent';
+
 function App() {
 
   const name: string = "Giovanna"
@@ -16,6 +18,7 @@ function App() {
      <p>Idade: {age}</p>
      {isStudent && <p>Sim está estudando</p>}
      <h3>{userGreeting(name)}</h3>
+     <FirstComponent />
     </div>
   );
 }
