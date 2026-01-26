@@ -2,6 +2,8 @@ import React from 'react';
 
 import FirstComponent from './components/FirstComponent';
 
+import SecondComponent from './components/SecondComponent';
+
 function App() {
 
   const name: string = "Giovanna"
@@ -19,6 +21,7 @@ function App() {
      {isStudent && <p>Sim está estudando</p>}
      <h3>{userGreeting(name)}</h3>
      <FirstComponent />
+     <SecondComponent name="segundo"/>
     </div>
   );
 }
