@@ -3,7 +3,7 @@ import React from 'react';
 import FirstComponent from './components/FirstComponent';
 
 import SecondComponent from './components/SecondComponent';
-
+import Destructuring from './components/Destructuring';
 function App() {
 
   const name: string = "Giovanna"
@@ -22,6 +22,7 @@ function App() {
      <h3>{userGreeting(name)}</h3>
      <FirstComponent />
      <SecondComponent name="segundo"/>
+     <Destructuring title="primeiro post" content="conteúdo" commentsQty={10} tags={["ts", "gigi"]} />
     </div>
   );
 }
