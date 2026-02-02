@@ -1,28 +1,32 @@
-import React from 'react';
+import React from "react";
 
-import FirstComponent from './components/FirstComponent';
+import FirstComponent from "./components/FirstComponent";
 
-import SecondComponent from './components/SecondComponent';
-import Destructuring from './components/Destructuring';
+import SecondComponent from "./components/SecondComponent";
+import Destructuring from "./components/Destructuring";
 function App() {
-
-  const name: string = "Giovanna"
-  const age: number = 18
-  const isStudent: boolean = true
+  const name: string = "Giovanna";
+  const age: number = 18;
+  const isStudent: boolean = true;
 
   const userGreeting = (name: string): string => {
     return `Olá, ${name}!`;
   };
   return (
     <div className="App">
-     <h1>Projeto com ts</h1>
-     <h2>Nome: {name}</h2>
-     <p>Idade: {age}</p>
-     {isStudent && <p>Sim está estudando</p>}
-     <h3>{userGreeting(name)}</h3>
-     <FirstComponent />
-     <SecondComponent name="segundo"/>
-     <Destructuring title="primeiro post" content="conteúdo" commentsQty={10} tags={["ts", "gigi"]} />
+      <h1>Projeto com ts</h1>
+      <h2>Nome: {name}</h2>
+      <p>Idade: {age}</p>
+      {isStudent && <p>Sim está estudando</p>}
+      <h3>{userGreeting(name)}</h3>
+      <FirstComponent />
+      <SecondComponent name="segundo" />
+      <Destructuring
+        title="primeiro post"
+        content="conteúdo"
+        commentsQty={10}
+        tags={["ts", "gigi"]}
+      />
     </div>
   );
 }
