@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 
 interface Props {}
 
 const State = () => {
-  const [text, setText] = useState();
+  const [text, setText] = useState("testando");
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
+  };
 
   return (
     <div>
       <p>O texto é: {text}</p>
+      <input type="text" onChange={handleChange} />
     </div>
   );
 };
