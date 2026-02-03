@@ -4,6 +4,9 @@ import FirstComponent from "./components/FirstComponent";
 
 import SecondComponent from "./components/SecondComponent";
 import Destructuring from "./components/Destructuring";
+
+import State from "./components/State";
+
 function App() {
   const name: string = "Giovanna";
   const age: number = 18;
@@ -27,6 +30,7 @@ function App() {
         commentsQty={10}
         tags={["ts", "gigi"]}
       />
+      <State />
     </div>
   );
 }
