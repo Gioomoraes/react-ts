@@ -3,7 +3,7 @@ import React from "react";
 import FirstComponent from "./components/FirstComponent";
 
 import SecondComponent from "./components/SecondComponent";
-import Destructuring from "./components/Destructuring";
+import Destructuring, { Category } from "./components/Destructuring";
 
 import State from "./components/State";
 
@@ -29,6 +29,7 @@ function App() {
         content="conteúdo"
         commentsQty={10}
         tags={["ts", "gigi"]}
+        category={Category.TS}
       />
       <State />
     </div>

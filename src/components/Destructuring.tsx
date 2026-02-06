@@ -1,26 +1,40 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
-    title: string
-    content: string
-    commentsQty: number
-tags: string[]
+  title: string;
+  content: string;
+  commentsQty: number;
+  tags: string[];
 
+  category: Category;
 }
 
-const Destructuring = ({title, content, commentsQty, tags}: Props) => {
-    return (
-        <div>
-<h2>{title}</h2>
-<p>{content}</p>
-<p>Comentários: {commentsQty} </p>
-<div>
-    {tags.map(tag => (
-<span>#{tag}</span>
-    ))}
-</div>
-        </div>
-    )
+export enum Category {
+  JS = "javascript",
+  TS = "typescript",
+  P = "Python",
 }
+
+const Destructuring = ({
+  title,
+  content,
+  commentsQty,
+  tags,
+  category,
+}: Props) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <p>{content}</p>
+      <p>Comentários: {commentsQty} </p>
+      <div>
+        {tags.map((tag) => (
+          <span>#{tag}</span>
+        ))}
+      </div>
+      <h4>Categoria: {category}</h4>
+    </div>
+  );
+};
 
 export default Destructuring;
