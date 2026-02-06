@@ -3,7 +3,7 @@ import React, { useState, ChangeEvent } from "react";
 interface Props {}
 
 const State = () => {
-  const [text, setText] = useState("testando");
+  const [text, setText] = useState<string | null>("testando");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
